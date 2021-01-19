@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activities.LabelActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary_dark"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Choose tags">
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:text="CONFIRM"
+            android:letterSpacing="-0.01"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="11"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="200dp"
+            android:layout_marginHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/textCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="3"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/category"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textComedy"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="喜剧"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textAction"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="动作"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textFeature"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="剧情"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textLove"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="爱情"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textScience"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="科幻"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textSuspense"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="悬疑"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textCrime"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="犯罪"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textGay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="同性"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="音乐"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textWar"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="战争"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textBiography"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="传记"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textFantasy"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="奇幻"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="冒险"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textDisaster"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="灾难"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textSword"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="武侠"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/textCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="3"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/country"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textChina"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="中国"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textAmerica"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="美国"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textHk"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="香港"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textIndia"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="印度"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textJapan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="日本"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textKorean"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="韩国"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textBritish"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="200dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="英国"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textFrench"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="200dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="法国"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textGermany"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/text_round_border"
+                android:gravity="center"
+                android:text="德国"
+                android:textColor="#FFF"
+                android:letterSpacing="0.3"
+                android:textAlignment="center"
+                android:textSize="15dp" />
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
+
+

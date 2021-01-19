@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parentLinear"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MainHomeFragment">
+
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Search"
+        android:inputType="text"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="影院热映"
+                    android:textSize="18dp"
+                    android:textColor="#FFF" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/hotall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部 >"
+                    android:textSize="11dp"
+                    android:textColor="#FFF"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignBaseline="@+id/hot"
+
+                    />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+                android:background="#FF909090" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="11dp"
+                android:paddingRight="8dp"></android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/coming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="即将上映"
+                    android:textSize="18dp"
+                    android:textColor="#FFF" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/comingall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部 >"
+                    android:textSize="11dp"
+                    android:textColor="#FFF"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignBaseline="@+id/coming"
+
+                    />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="7dp"
+                android:background="#FF909090" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_coming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="11dp"
+                android:paddingRight="8dp"></android.support.v7.widget.RecyclerView>
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="分类查看"
+                android:textSize="18dp"
+                android:textColor="#FFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="7dp"
+                android:background="#FF909090" />
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="4"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="25dp">
+
+
+                <TextView
+                    android:id="@+id/textComedy"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/comedy"
+                    android:gravity="center"
+                    android:text="喜剧"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textAction"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/action"
+                    android:gravity="center"
+                    android:text="动作"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/textLove"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/love"
+                    android:gravity="center"
+                    android:text="爱情"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textScience"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/science"
+                    android:gravity="center"
+                    android:text="科幻"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textSuspense"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/suspense"
+                    android:gravity="center"
+                    android:text="悬疑"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/textCrime"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/crime"
+                    android:gravity="center"
+                    android:text="犯罪"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textFantasy"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/fantasy"
+                    android:gravity="center"
+                    android:text="奇幻"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textMusic"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/music"
+                    android:gravity="center"
+                    android:text="歌舞"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/textGay"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/gay"
+                    android:gravity="center"
+                    android:text="同性"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textRisk"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/risk"
+                    android:gravity="center"
+                    android:text="冒险"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textWar"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/war"
+                    android:gravity="center"
+                    android:text="战争"
+                    android:textColor="#FFF"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+            </GridLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

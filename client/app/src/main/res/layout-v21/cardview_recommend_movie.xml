@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false"
+    android:clickable="true"
+    android:layout_height="180dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/card_recommend_movie_poster"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8.5"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_recommend_movie_title_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="孟买酒店（2018）"
+                android:textSize="18dp"
+                android:layout_gravity="center"
+                android:ellipsize="end" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/card_recommend_ratingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="7.4"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_recommend_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2018 / 澳大利亚 美国 印度 / 剧情 历史 惊悚 / 安东尼·马拉斯 / 艾米·汉莫 纳赞宁·波妮阿蒂"
+                android:lines="2"
+                android:ellipsize="end" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/card_recommend_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:textSize="14dp"
+                android:background="@color/colorTag"
+                android:textColor="#ffff"
+                android:text="喜欢《猪猪侠》的人也喜欢" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/card_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+</android.support.design.card.MaterialCardView>

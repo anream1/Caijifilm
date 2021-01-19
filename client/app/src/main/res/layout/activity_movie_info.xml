@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_info_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MovieInfoActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MovieInfoActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="none"
+                    app:layout_scrollFlags="">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/card_movie_poster"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="4" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/info_movie_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:textColor="#eee"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:text="孟买酒店"
+                            android:textSize="24dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/info_movie_title_aka_year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:text="Hotel Mumbai(2018)"
+                            android:textColor="#eee"
+                            android:textSize="18dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="">
+
+                            <cn.edu.cqu.caijimovie.customize_widget.XLHRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/info_ratingBarRated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_vertical"
+                                app:numStars="5"
+                                app:rating="4.5"
+                                app:ratingViewClass="cn.edu.cqu.caijimovie.customize_widget.SimpleRatingView" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/info_ratingTextRatedInt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:paddingLeft="10dp"
+                                android:text="8."
+                                android:textColor="#FFFFFF"
+                                android:textSize="30dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/info_ratingTextRatedDec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:text="4"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/info_tags"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="3"
+                            android:text="澳大利亚 美国 印度 / 剧情 历史 惊悚 / 片长：108分钟 / 安东尼·马拉斯 / 艾米·汉莫 纳赞宁·波妮阿蒂" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center"
+                    app:layout_collapseMode="pin"
+                    app:expanded="true"
+                    app:popupTheme="@style/PopupOverlay">
+
+
+                    <ImageButton
+                        android:id="@+id/movie_info_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:srcCompat="@drawable/ic_chevron_left_white_24dp" />
+
+
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/content_movie_info" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:backgroundTint="#aadd"
+            app:borderWidth="0dp"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end"
+            app:srcCompat="@drawable/ic_favorite_border_grey_24dp" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--发表言论的Fab-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#aadd"
+        app:borderWidth="0dp"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865"
+        app:srcCompat="@drawable/ic_comment_white_24dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainMeFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.design.widget.CoordinatorLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activities.MovieInfoActivity">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_user_bar_height"
+                android:fitsSystemWindows="true"
+                android:background="@color/cardview_dark_background"
+                android:gravity="right"
+                android:theme="@style/AppBarOverlay">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:toolbarId="@+id/toolbar">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal"
+                        app:layout_collapseMode="none"
+                        app:layout_scrollFlags="">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/me_profile_photo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="5dp"
+                            app:srcCompat="@drawable/caiji"
+                            android:layout_weight="4" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8.5"
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="40dp"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/frag_me_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#fff"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:text="用户名啦"
+                                android:textSize="24dp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:paddingVertical="4dp"
+                                android:id="@+id/frag_me_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:focusableInTouchMode="true"
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:text="411973089@qq.com"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="?attr/actionBarSize"-->
+                    <!--android:gravity="center"-->
+                    <!--app:layout_collapseMode="pin"-->
+                    <!--app:expanded="true"-->
+                    <!--app:popupTheme="@style/PopupOverlay"></android.support.v7.widget.Toolbar>-->
+
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/content_me" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:backgroundTint="@color/colorTag"
+                app:borderWidth="0dp"
+                app:layout_anchor="@id/app_bar"
+                app:layout_anchorGravity="center|end"
+
+                app:srcCompat="@drawable/ic_settings_white_24dp" />
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

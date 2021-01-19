@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MyMoviesActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        app:layout_collapseMode="pin"
+        app:expanded="true"
+        app:popupTheme="@style/PopupOverlay">
+
+
+        <ImageButton
+            android:id="@+id/my_movie_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_chevron_left_white_24dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="我的电影"
+            android:textSize="22dp"
+            android:textColor="#f1f1f1" />
+    </android.support.v7.widget.Toolbar>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:showText="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:switchPadding="20dp"
+        android:elevation="3dp"
+        android:textOn="看 过"
+        android:textOff="想 看"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:switchMinWidth="60dp"
+        android:minHeight="50dp"
+        android:paddingRight="20dp"
+        android:track="@color/cardview_dark_background"
+        android:thumb="@color/colorTag" />
+
+
+    <cn.edu.cqu.caijimovie.utils.MyScrollViewUtil
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/movies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="1"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+    </cn.edu.cqu.caijimovie.utils.MyScrollViewUtil>
+
+</LinearLayout>
